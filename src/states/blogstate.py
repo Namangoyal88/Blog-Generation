@@ -1,0 +1,13 @@
+from typing import TypedDict
+from pydantic import BaseModel, Field
+
+
+class Blog(BaseModel):
+    title: str = Field(description = 'The title of the blog')
+    content: str = Field(description = 'The content of the blog')
+    
+
+class BlogState(TypedDict):
+    topic: str
+    blof: Blog
+    current_language: str
