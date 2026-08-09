@@ -9,5 +9,5 @@ langgraph
 streamlit
 uvicorn
 watchdog
-langchain_cli[inmem]
+langgraph-cli[inmem]
 fastapi

@@ -13,7 +13,7 @@ class NemotronLLM:
             hf_llm = HuggingFaceEndpoint(
                 repo_id = 'nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16',
                 huggingfacehub_api_token = hf_token,
-                max_new_tokens = 2048,
+                max_new_tokens = 4096,
                 )
             llm = ChatHuggingFace(hf_llm)
             return llm
