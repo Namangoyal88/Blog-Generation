@@ -13,9 +13,9 @@ class NemotronLLM:
             hf_llm = HuggingFaceEndpoint(
                 repo_id = 'nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16',
                 huggingfacehub_api_token = hf_token,
-                max_new_tokens = 4096,
+                max_new_tokens = 1024,
                 )
-            llm = ChatHuggingFace(hf_llm)
+            llm = ChatHuggingFace(llm = hf_llm)
             return llm
         except Exception as e:
-            return ValueError(f"Error initializing Groq LLM: {e}")
+            raise ValueError(f"Error initializing Nemotron LLM: {e}")

@@ -14,4 +14,4 @@ class GroqLLM:
             llm = ChatGroq(api_key = groq_api_key, model = 'openai/gpt-oss-120b')
             return llm
         except Exception as e:
-            return ValueError(f"Error initializing Groq LLM: {e}")
+            raise ValueError(f"Error initializing Groq LLM: {e}")
